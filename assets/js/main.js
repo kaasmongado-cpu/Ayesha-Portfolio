@@ -233,24 +233,5 @@ sr.reveal(`.footer, footer_container`, {
 });
 
 
-const editAboutBtn = document.getElementById("edit-about-btn");
-const aboutText = document.getElementById("about-text");
-
-editAboutBtn.addEventListener("click", () => {
-  const isEditable = aboutText.getAttribute("contenteditable") === "true";
-
-  if (!isEditable) {
-    // Switch to edit mode
-    aboutText.setAttribute("contenteditable", "true");
-    aboutText.focus();
-    editAboutBtn.innerHTML = "<i class='bx bx-save'></i> Save";
-    editAboutBtn.classList.add("button-active");
-  } else {
-    // Switch back to normal mode
-    aboutText.setAttribute("contenteditable", "false");
-    editAboutBtn.innerHTML = "<i class='bx bx-edit-alt'></i> Edit";
-    editAboutBtn.classList.remove("button-active");
-  }
-});
 
 
